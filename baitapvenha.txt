@@ -1,0 +1,16 @@
+Tạo ứng dụng react với tên demo1 
+- Nhúng bootstrap
+- tạo file demo2.js 
+    + Tạo đối tượng employee (id, name, salary)
+    + tạo function display
+        => hiển thị thông tin employee
+- export function display
+
+- sửa đổi App.js
+    + sử dụng biểu thức jsx với:
+            -> biến
+            -> đối tượng 
+            -> hàm được lấy từ demo2.js 
+- Đọc tiếp phần conponent trong slide trên thư mục
+    + demo => class component
+            => function component

@@ -1,0 +1,7 @@
+tạo ứng dụng demo1
+- thay đổi App.js
+- gọi sử dụng biểu thức JSX
+    -> biến
+    -> đối tượng
+    -> hàm
+    -> test import/export (demo1.js)
