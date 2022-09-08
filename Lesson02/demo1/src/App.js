@@ -2,6 +2,8 @@ import logo from './logo.png';
 import './App.css';
 
 import fn_Test from './demo1';
+import Arr from './arr';
+
 
 var name="Chung Trịnh";
 const student={
@@ -35,6 +37,9 @@ function App() {
 
             {/* sử dụng import function  */}
             {fn_Test("Chung",45)}
+          </div>
+          <div className="container">
+            {Arr}
           </div>
           
       </section>

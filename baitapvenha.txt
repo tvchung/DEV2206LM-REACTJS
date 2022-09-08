@@ -1,4 +1,4 @@
-Tạo ứng dụng react với tên demo1 
+Tạo ứng dụng react với tên demo2 
 - Nhúng bootstrap
 - tạo file demo2.js 
     + Tạo đối tượng employee (id, name, salary)
