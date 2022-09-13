@@ -18,12 +18,15 @@ const Member1 = (props)=>{
 
 // Component lồng nhau
 const obj = {
-  path: 'logo.svg',
+  path: 'logo.png',
   name:'Hoàng nam tiến',
   age:50
 }
 
+console.log(obj);
+
 function Avatar(props){
+  console.log(props.link);
   return(
     <div>
       <img src={props.link} alt="ảnh" />
