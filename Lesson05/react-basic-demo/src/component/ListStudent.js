@@ -5,18 +5,15 @@ class ListStudent extends Component {
   constructor(props) {
     super(props);
   }
-  //event
-  handleClickViewEdit = (toggle)=>{
-    this.props.clickViewEdit(toggle);
-  }
+  
   render() {
-    let { students,name } = this.props;
-    let listElementStudent = students.map((stud, index) => {
-      return <Student key={st.studentid} student={stud} stt={index+1} clickViewEdit={this.handleClickViewEdit} />;
+    let { students } = this.props;
+    let listElementStudent = students.map((st, index) => {
+      return <Student key={st.studentid} student={st} stt={index+1} />;
     });
     return (
       <div className="card-body">
-        <h3 className="card-title">Danh sách sinh viên - {name} </h3>
+        <h3 className="card-title">Danh sách sinh viên  </h3>
         <div className="table-responsive pt-3">
           <table className="table table-bordered">
             <thead>

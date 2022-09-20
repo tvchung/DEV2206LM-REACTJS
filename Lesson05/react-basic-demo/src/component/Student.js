@@ -1,8 +1,6 @@
 import {React,Component} from 'react';
 class Student extends Component{
-  handClickEditView =()=>{
-    this.props.clickViewEdit(true);
-  }
+   
     render(){
         let {student, stt} = this.props;
         let gt = 'Nam';
@@ -21,14 +19,14 @@ class Student extends Component{
                     <button
                       type="button"
                       className="btn btn-danger btn-icon-text"
-                      onClick={this.handClickEditView}
+                       
                     >
                       Xem
                     </button>
                     <button
                       type="button"
                       className="btn btn-warning btn-icon-text"
-                      onClick={this.handClickEditView}
+                       
                     >
                       Sửa
                     </button>

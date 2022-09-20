@@ -1,9 +1,7 @@
-import React from "react";
-import { Component } from "react";
-import Control from "./component/Control";
-import "./App.css";
-import ListStudent from "./component/ListStudent";
-import Form from "./component/Form";
+import {React,Component} from 'react';
+import Control from './component/Control';
+import Form from './component/Form';
+import ListStudent from './component/ListStudent';
 
 class App extends Component {
   // Sử dụng Component để khởi tạo props và state
@@ -16,34 +14,27 @@ class App extends Component {
         {studentid:"SV002", studentName:"Nguyễn Văn B",age:21, sex:false, birthDay:"2002-09-09",birthPlace:"Đà nẵng", address:"1 Ngô Quyền"},
         {studentid:"SV003", studentName:"Nguyễn Văn C",age:19, sex:true, birthDay:"2002-07-07",birthPlace:"Tp. Hồ chí minh", address:"25 Vũ Tông Phan"}
       ],
-      isToggle: false,
-      actionName:''
+      isToggle:false,
+      actionName:'',
     }
   }
-  // event 
-  handClickNewSt = (toggle,actionNameParam)=>{
-    //  xử lý nhận dữ liệu từ component con - Control
+
+  handleClickNewSt = (toggle, actionParam)=>{
     this.setState({
       isToggle:toggle,
-      actionName:actionNameParam
+      actionName:actionParam
     });
   }
-
-  handClickSubmitForm =(toggle)=>{
+  handleClickClose = (toggle)=>{
     this.setState({
       isToggle:toggle
     });
   }
 
-  handleClickViewEdit =(toggle)=>{
-    this.setState({
-      isToggle:toggle
-    })
-  }
-  render() {
+  render(){
     let elementForm ='';
-    if(this.state.isToggle){
-      elementForm = <Form clickSubmit = {this.handClickSubmitForm} actionName={this.state.actionName} />;
+    if(this.state.isToggle==true){
+      elementForm = <Form  clickClose = {this.handleClickClose} actionValue={this.state.actionName} />
     }
     return (
       <div className="">
@@ -51,11 +42,10 @@ class App extends Component {
           <div className="col-lg-7 grid-margin stretch-card">
             <div className="card">
               {/* control  */}
-              <Control clickNewStudent = {this.handClickNewSt} />
+              <Control clickNewStudent={this.handleClickNewSt} />
               {/* ./control  */}
               {/* ListStudent  */}
-              <ListStudent students = {this.state.students}   name="Chung Trịnh"
-              clickViewEdit = {this.handleClickViewEdit}/>
+              <ListStudent  students = {this.state.students} />
               {/* ./ListStudent  */}
             </div>
           </div>
@@ -69,4 +59,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

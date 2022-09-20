@@ -1,11 +1,13 @@
 import {React,Component} from 'react';
 class Form extends Component{
-    handClickSubmit = (isToggle)=>{
-      this.props.clickSubmit(false);
-    }
-    render(){
-        let elementValue= this.props.actionName;
 
+    handleClickSubmit = ()=>{
+      this.props.clickClose(false);
+    }
+    
+    
+    render(){
+        let actionValue=this.props.actionValue;
         return(
             <div className="card">
               <div className="card-body">
@@ -68,8 +70,9 @@ class Form extends Component{
                       <textarea className="form-control" defaultValue={""} />
                     </div>
                   </div>
-                  <button type="button" className="btn btn-primary me-2" onClick={this.handClickSubmit}>
-                    {elementValue}
+                  <button type="button" className="btn btn-primary me-2" 
+                    onClick={this.handleClickSubmit}>
+                    {actionValue}
                   </button>
                 </form>
               </div>

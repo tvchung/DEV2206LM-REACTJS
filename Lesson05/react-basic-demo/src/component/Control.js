@@ -1,16 +1,19 @@
 import { React, Component } from "react";
 class Control extends Component {
-  handClickNewStudent = ()=>{
-    //  xử lý sự kiện onclick của nút theme mới
-    this.props.clickNewStudent(true,'Create');
+ 
+  handleClickNewStudent = ()=>{
+    // alert("haha");
+    this.props.clickNewStudent(true,'Thêm');
   }
+
   render() {
     return (
       <div className="card-header">
         <div className="row">
           <div className="col-3 ">
             <button type="button" className="btn btn-primary btn-icon-text"
-              onClick={this.handClickNewStudent}>
+              onClick={this.handleClickNewStudent}
+            >
               Thêm mới sinh viên
             </button>
           </div>
