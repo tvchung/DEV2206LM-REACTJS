@@ -1,0 +1,3 @@
+xử lý form như trong mini-project
+- cập nhật giá trị trên các điều khiển
+- hiển thị ra màng hình (alert / console/ ) khi người dùng submit form 
