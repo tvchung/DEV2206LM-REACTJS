@@ -1,0 +1,4 @@
+- Bài tập tương tự với cấu trúc dữ liệu khách hàng
+hoặc sản phẩm
+KhachHang(MaKH, HoTen, DiaChi, Email, DienThoai, NgaySinh,TrangThai)
+Product(pID, name, price, quantity, total, image, active)
